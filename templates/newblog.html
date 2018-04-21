@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    form {
+        background-color: white;
+        padding: 5px;
+        margin: 0 auto;
+        width: 550px;
+        font: 16px;
+        border-radius: 10px;
+    }
+    br {
+    margin-bottom: 15px;
+    }
+</style>
+    <h1>Create a New Blog Entry</h1>
+    <form action='/newblog' method="POST">
+        <label>Create New Blog:</label>
+        <br>
+
+        <label>Enter a Title:</label>
+        <input type="text" name="title" value="{{ title }}">
+        <br>
+
+        <label for="body">Enter a Body </label>
+        <textarea name="body" rows="10" cols="30" value=""></textarea>
+        <br>
+
+        <label for="submit">Post Blog</label>
+        <input type="submit" value="Add Blog Post"/>
+        <br>
+    </form>
+
+{% endblock %}
